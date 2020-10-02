@@ -72,7 +72,7 @@ function draw() {
     monkey.collide (ground);
   
     if (bananaGroup.isTouching(monkey)) {
-      score= score+50;
+      score= score+2;
       bananaGroup.destroyEach();
     }
   
