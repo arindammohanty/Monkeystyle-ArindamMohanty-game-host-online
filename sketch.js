@@ -26,7 +26,7 @@ function setup() {
     background1= createSprite (windowWidth/2,windowHeight/2);
     background1.addImage ("backgroundimage", backgroundImage);
     background1.velocityX= -2;
-    background2= createSprite (windowWidth*2,windowHeight/2);
+    background2= createSprite (windowWidth,windowHeight/2);
     background2.addImage ("backgroundimage", backgroundImage);
     background2.velocityX= -2;
     
