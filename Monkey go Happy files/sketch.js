@@ -2,7 +2,7 @@
   var obstacle, obstacleImage, obstacleGroup;
   var banana, bananaImage, bananaGroup;
   var monkey, monkey_running;
-  var background1, background2, backgroundImage;
+  var background1, background2, background3, backgroundImage;
   var score= 0;
   var ground;
 
@@ -26,9 +26,12 @@ function setup() {
     background1= createSprite (windowWidth/2,windowHeight/2);
     background1.addImage ("backgroundimage", backgroundImage);
     background1.velocityX= -2;
-    background2= createSprite (windowWidth*2,windowHeight/2);
+    background2= createSprite (windowWidth,windowHeight/2);
     background2.addImage ("backgroundimage", backgroundImage);
     background2.velocityX= -2;
+    background3= createSprite (windowWidth*2,windowHeight/2);
+    background3.addImage ("backgroundimage", backgroundImage);
+    background3.velocityX= -2;
     
   //creating monkey sprite
     monkey= createSprite (windowWidth/8,windowHeight/2+300,10,10);
@@ -56,6 +59,9 @@ function draw() {
     } 
     if (background2.x<windowWidth/2) {
       background2.x= windowWidth;
+    }
+    if (background3.x<windowWidth) {
+      background3.x= windowWidth*2;
     }
   
   //making the monkey jump  
